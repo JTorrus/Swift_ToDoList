@@ -14,6 +14,8 @@
 		EF31056B20484BCB003C768F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF31056920484BCB003C768F /* LaunchScreen.storyboard */; };
 		EF31057620484BCC003C768F /* ToDoListLSGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31057520484BCC003C768F /* ToDoListLSGTests.swift */; };
 		EF31058120484BCC003C768F /* ToDoListLSGUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31058020484BCC003C768F /* ToDoListLSGUITests.swift */; };
+		EF31058F20484C5D003C768F /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31058E20484C5D003C768F /* ToDoItem.swift */; };
+		EF31059120484D25003C768F /* ToDoItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31059020484D25003C768F /* ToDoItemManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		EF31057C20484BCC003C768F /* ToDoListLSGUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoListLSGUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF31058020484BCC003C768F /* ToDoListLSGUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListLSGUITests.swift; sourceTree = "<group>"; };
 		EF31058220484BCC003C768F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF31058E20484C5D003C768F /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
+		EF31059020484D25003C768F /* ToDoItemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +103,12 @@
 			children = (
 				EF31056020484BCB003C768F /* AppDelegate.swift */,
 				EF31056220484BCB003C768F /* ViewController.swift */,
+				EF31058E20484C5D003C768F /* ToDoItem.swift */,
 				EF31056420484BCB003C768F /* Main.storyboard */,
 				EF31056720484BCB003C768F /* Assets.xcassets */,
 				EF31056920484BCB003C768F /* LaunchScreen.storyboard */,
 				EF31056C20484BCB003C768F /* Info.plist */,
+				EF31059020484D25003C768F /* ToDoItemManager.swift */,
 			);
 			path = ToDoListLSG;
 			sourceTree = "<group>";
@@ -259,8 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF31059120484D25003C768F /* ToDoItemManager.swift in Sources */,
 				EF31056320484BCB003C768F /* ViewController.swift in Sources */,
 				EF31056120484BCB003C768F /* AppDelegate.swift in Sources */,
+				EF31058F20484C5D003C768F /* ToDoItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
