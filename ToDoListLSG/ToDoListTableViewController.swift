@@ -10,6 +10,7 @@ import UIKit
 
 class ToDoListTableViewController: UITableViewController {
     var toDoItemManager: ToDoItemManager = ToDoItemManager()
+    var newItem: ToDoItem?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,6 +64,14 @@ class ToDoListTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: false)
         toDoItemManager.markItemAsCompleted(itemIndex: indexPath.row)
         tableView.reloadData()
+    }
+    
+    @IBAction func goBack(segue: UIStoryboardSegue) {
+        if let newItemAdded = newItem {
+            self.newItem = nil
+            toDoItemManager.addItem(item: newItemAdded)
+            tableView.reloadData()
+        }
     }
     
     

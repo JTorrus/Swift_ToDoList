@@ -13,7 +13,7 @@
         <!--New item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ToDoListLSG" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AddToDoViewController" customModule="ToDoListLSG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,14 +35,23 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="New item" id="AAR-d4-3he">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="lJG-1A-NcU"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="P50-rV-jNA"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="lJG-1A-NcU">
+                            <connections>
+                                <segue destination="XFl-Ef-8sn" kind="unwind" identifier="Cancel Segue" unwindAction="goBackWithSegue:" id="pBu-fT-cCf"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="P50-rV-jNA">
+                            <connections>
+                                <segue destination="XFl-Ef-8sn" kind="unwind" identifier="Save Segue" unwindAction="goBackWithSegue:" id="Vxa-sO-YiS"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="newItemTextField" destination="ifl-6c-G1f" id="fXF-xh-5Ls"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="XFl-Ef-8sn" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="236" y="117.39130434782609"/>
         </scene>
@@ -86,7 +95,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="To Do List" id="E2a-Fw-fse">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="vw5-93-NbP"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="vw5-93-NbP">
+                            <connections>
+                                <segue destination="biX-ME-580" kind="presentation" id="y0m-Jp-1zv"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KBT-Ck-72P" userLabel="First Responder" sceneMemberID="firstResponder"/>
